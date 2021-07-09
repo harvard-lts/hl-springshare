@@ -1,0 +1,278 @@
+body {
+  font-family: "Trueno", sans-serif;
+  color: #1e1e1e;
+  margin: -60px 0 60px 0;
+}
+
+#s-la-askform-13615 {
+  max-width: 930px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 60px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+  border-bottom: 1px solid #c0c0c0;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+}
+
+fieldset div {
+  max-width: 730px;
+}
+
+fieldset:first-of-type {
+  padding-bottom: 15px;
+}
+
+h1 {
+  margin-top: 60px;
+  margin-bottom: 60px;
+  padding: 0px 25px;
+  background-image: linear-gradient(-46deg, #0579b8 0%, #2a5280 100%);
+  color: #fff;
+  font-size: 26px;
+  font-weight: 700;
+  letter-spacing: 1.52px;
+  line-height: 60px;
+}
+
+h1:after {
+  content:" a Librarian";
+  font-family: "Lora", Georgia, sans-serif;
+  font-size: 24px;
+  line-height: 1.3;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+.s-la-askform-intro {
+	font-family: "Lora", Georgia, serif;
+}
+
+.sr-only.s-la-askform-capt {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	word-wrap: normal;
+}
+
+legend {
+	text-transform: uppercase;
+	font-size: 19px;
+	font-weight: 700;
+	line-height: 30px;
+	letter-spacing: 1.5px;
+	margin-bottom: 15px;
+}
+
+.control-label {
+  display: block;
+  font-weight: 700;
+  line-height: 32px;
+}
+
+fieldset .form-group:not(:last-of-type) {
+  margin-bottom: 24px;
+}
+
+input, textarea, select {
+	font-size: 19px;
+	padding: 0 10px;
+	border-radius: 4px;
+	font-family: "Lora", Georgia, serif;
+  height: 45px;
+	width: 100%;
+  max-width: 425px;
+	border: 1px solid #1e1e1e;
+}
+
+.pquestion_wrap input, textarea {
+  max-width: 708px;
+}
+
+textarea {
+	height: 68px;
+	padding: 10px;
+}
+
+#file_uploads {
+	border: none;
+	padding: 0;
+	font-family: "Trueno", sans-serif;
+	cursor: pointer;
+	font-size: 14px;
+	border-radius: 0;
+}
+
+.s-ui-filedrop span, .s-ui-filedrop p, .s-la-askform-reqnote {
+  margin-top: 0;
+  color: #6c6c6c;
+  font-weight: 200;
+  font-size: 14px;
+  line-height: 17px;
+  margin-bottom: 0;
+}
+
+.alert.alert-danger.s-ui-filedrop-error p {
+	color: red;
+}
+
+.s-la-askform-reqnote {
+	font-size: 14px;
+	color: #6c6c6c;
+	margin-bottom: 15px;
+	font-weight: 200;
+}
+
+select {
+  max-width: 300px;
+}
+
+button {
+	border: 2px solid transparent;
+	border-radius: 4px;
+	cursor: pointer;
+	display: inline-block;
+	font-family: "Trueno", sans-serif;
+	font-size: 14px;
+	font-weight: 700;
+	letter-spacing: 1.17px;
+	line-height: 1em;
+	padding: 12px 23px;
+	text-decoration: none;
+	text-transform: uppercase;
+	transition: all 0.4s ease;
+	background: #0579b8;
+	color: #fff;
+}
+
+button:hover, button:focus {
+	background: #2a5280;
+}
+
+button.btn-xs {
+	background: #fff;
+	font-size: 12px;
+	padding: 5px 9px;
+	border: 1px solid #1e1e1e;
+	color: #1e1e1e;
+}
+
+button.btn-xs:hover, button.btn-xs:focus {
+  background: #6c6c6c;
+  color: #fff;
+}
+
+
+
+
+/* FILE UPLOAD */
+
+.s-ui-filedrop.has-advanced-upload {
+	background-color: #eee;
+	outline: 2px dashed #000;
+	outline-offset: -10px;
+	padding: 30px;
+	text-align: center;
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	flex-flow: row wrap;
+	align-items: center;
+}
+
+.s-la-widget input[type="file"] {
+	display: block;
+}
+
+.s-la-widget .sr-only {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	padding: 0;
+	overflow: hidden;
+	clip: rect(0,0,0,0);
+	border: 0;
+}
+
+.s-ui-filedrop.has-advanced-upload label {
+	border: none;
+	background-color: transparent;
+	color: #111;
+	white-space: normal;
+	flex: 1 1 auto;
+	cursor: pointer;
+	margin: 15px;
+}
+
+.s-la-widget .btn-sm {
+	padding: 5px 10px;
+	font-size: 12px;
+	line-height: 1.5;
+	border-radius: 3px;
+}
+
+.s-la-widget .hidden {
+	display: none !important;
+}
+
+.s-ui-filedrop.has-advanced-upload .s-ui-filedrop-clear {
+	display: block;
+	position: absolute;
+	right: 15px;
+	bottom: 15px;
+}
+
+.s-ui-filedrop-error:empty {
+	display: none;
+}
+.s-la-widget .alert-danger {
+	background-color: #f2dede;
+	border-color: #ebccd1;
+	color: #a94442;
+	width: 100%;
+}
+.s-la-widget .alert {
+	padding: 15px;
+	border: 1px solid transparent;
+	border-radius: 4px;
+}
+
+.s-ui-filedrop input[type="file"] + label:hover, .s-ui-filedrop input[type="file"].has-focus + label, .s-ui-filedrop input[type="file"]:focus + label {
+	outline: 2px dotted #212121;
+	outline: -webkit-focus-ring-color auto 5px;
+}
+.s-la-widget .btn-default:hover {
+	border-color: transparent;
+}
+.s-ui-filedrop.has-advanced-upload .s-ui-filedrop-filenames {
+	flex: 1 1 auto;
+	text-align: left;
+}
+.s-la-widget ol, .s-la-widget ul {
+	margin-top: 0;
+	margin-bottom: 10px;
+	font-size: 14px;
+}
+.s-ui-filedrop.has-advanced-upload .s-ui-filedrop-filenames {
+	text-align: left;
+}
+
+.s-la-widget .form-control:focus {
+	border-color: #66afe9;
+	outline: 0;
+	box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+}

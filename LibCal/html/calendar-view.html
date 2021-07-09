@@ -1,0 +1,31 @@
+<!-- Admin > Events > Settings > Customize Monthly/Weekly Calendar Template -->
+<div class="s-lc-mc-evt{{#categories_arr}} s-lc-event-category-{{cat_id}}{{/categories_arr}}" style="border-left: 3px solid {{color}}">
+    <a href="{{url}}" data-toggle="popover" data-placement="top" data-container="body" data-html="true" data-trigger="hover" title="{{title}}" data-content="
+        <dl class='dl-horizontal'>
+            <dt>{{textTime}}</dt><dd>{{start}} - {{end}}</dd>
+            {{#campus}}<dt>Library</dt><dd>{{campus}}</dd>{{/campus}}
+            {{#audiences.0}}
+                <dt>{{textAudience}}</dt>
+                <dd>
+                    {{#audiences}}
+                    <span class='s-lc-event-category-link'>{{name}}</span>
+                    {{/audiences}}
+                </dd>
+            {{/audiences.0}}
+            {{#categories_arr.0}}
+                <dt>{{textCategories}}</dt>
+                <dd>
+                    {{#categories_arr}}
+                    <span class='s-lc-event-category-link'>{{name}}</span>
+                    {{/categories_arr}}
+                </dd>
+            {{/categories_arr.0}}
+            {{#presenter}}<dt>{{textPresenter}}</dt><dd>{{presenter}}</dd>{{/presenter}}
+            {{#shortdesc}}<dt>{{textDescription}}</dt><dd>{{shortdesc}}</dd>{{/shortdesc}}
+            {{#registration_cost}}<dt>{{textEventCost}}:</dt><dd>{{registration_cost}}</dd>{{/registration_cost}}
+        </dl>"
+        aria-label="{{title}}: {{date}} ({{start}} - {{end}})"
+    >
+        {{title}} {{#online_event}}({{textOnlineEvent}}){{/online_event}}
+    </a><br>
+</div>

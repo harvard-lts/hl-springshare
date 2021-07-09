@@ -1,0 +1,172 @@
+<!-- Admin > Look and Feel > Event Page Editor -->
+<div class="row">
+    <div class="col-md-12 hl__event-detail">
+        {{^custom_page}}
+            <div class="row margin-top-xlg">
+                <div class="col-md-12 hl__breadcrumb">
+                    <a href="{{calendar_url}}" class="s-lc-event-browse-search">Home</a>
+                </div>
+            </div>
+        {{/custom_page}}
+
+        <div class="media">
+            <div class="media-body">
+                {{#campus}}
+                    <div class="hl__eyebrow">{{campus}}</div>
+                {{/campus}}
+
+                <h1 class="media-heading">
+                    {{title}}
+                </h1>
+
+                <div class="dl-horizontal s-lc-event-dl">
+                  <div class="hl__event-info">
+                    <div class="hl__event-info__date-time">
+                      {{#series_datetimes}}
+                          <span class="hl__event-series">{{{series_datetimes}}}</span>
+                      {{/series_datetimes}}
+
+                      {{#single_event}}
+                          <span>
+                            {{date}}, {{start}} {{#end}} - {{end}}{{/end}}
+                          </span>
+
+                          {{#future_dates.0}}
+                              <span class="hl__more-dates">
+                                <span class="fa fa-calendar pad-left-med" aria-hidden="true"></span>
+                                <a href="#" onclick="jQuery('#future_{{id}}').toggle(); return false;" class="hl__more-dates__link"> Show more dates</a>
+                                <p id="future_{{id}}" style="display:none">
+                                    {{#future_dates}}
+                                        <a href="/event/{{event_id}}">{{start}}</a><br>
+                                    {{/future_dates}}
+                                </p>
+                              </span>
+                          {{/future_dates.0}}
+                      {{/single_event}}
+
+                      {{#multi_day_event}}
+                          <span>
+                              {{^all_day_event}}{{start}},{{/all_day_event}}
+                              {{date}}
+                          </span>
+                          <span>
+                              {{^all_day_event}}{{end}},{{/all_day_event}}
+                              {{multi_day_end_date}}
+                          </span>
+                      {{/multi_day_event}}
+                    </div>
+
+                    <div>
+                      {{#location}}
+                          <span>{{#locations}}{{name}}{{#map}} (<a href="{{map}}" target="_blank" title="Open map for {{name}}">Map <span class="fa fa-external-link" aria-hidden="true"></span></a>){{/map}}{{^last}}, {{/last}}{{/locations}}</span>
+                      {{/location}}
+                    </div>
+
+                    <div>
+                      {{#online_event}}
+                          <span class="s-lc-event-category-link">Online, </span>
+                      {{/online_event}}
+
+                      {{#audiences.0}}
+                          <span>{{#audiences}}
+                              <span class="s-lc-event-category-link">
+                                  {{name}},
+                              </span>
+                              {{/audiences}}
+                          </span>
+                      {{/audiences.0}}
+
+                      {{#categories_arr.0}}
+                           <span>
+                              {{#categories_arr}}
+                              <span class="s-lc-event-category-link">
+                                  {{name}},
+                              </span>
+                              {{/categories_arr}}
+                           </span>
+                      {{/categories_arr.0}}
+                    </div>
+                  </div>
+
+                  <div class="hl__register">
+                    {{#registration_form}}
+                    {{{registration_form}}}
+                    {{/registration_form}}
+
+                    {{#reg_early}}
+                    <div class="row margin-top-med hl__registered__expired">
+                        <div class="s-lc-event-label"></div>
+                        <div class="alert alert-info">{{reg_early}}</div>
+                    </div>
+                    {{/reg_early}}
+
+                    {{#reg_expired}}
+                    <div class="row margin-top-med hl__registered__expired">
+                        <div class="s-lc-event-label"></div>
+                        <div class="alert alert-warning">{{reg_expired}}</div>
+                    </div>
+                    {{/reg_expired}}
+
+                    {{#reg_expired_series}}
+                    <div class="row margin-top-med">
+                        <div class="s-lc-event-label"></div>
+                        <div class="alert alert-warning">{{reg_expired_series}}</div>
+                    </div>
+                    {{/reg_expired_series}}
+                  </div>
+                </div>
+
+
+
+                <div id="s-lc-event-desc">
+                  {{#featured_image}}
+                      <div class="hl__featured-image">
+                          <img class="media-object img-thumbnail img-responsive s-lc-event-fi" src="{{featured_image}}" alt="{{title}}">
+                      </div>
+                  {{/featured_image}}
+                  {{{description}}}
+                </div>
+
+                {{#lg_id}}
+                <p class="hl__related-materials">
+                    Related LibGuide:
+                    <a href="{{lg_url}}">{{lg_name}} by {{lg_owner}}</a>
+                </p>
+                {{/lg_id}}
+
+                {{#file_attachment.0}}
+                    <p class="hl__related-materials">Attachments</p>
+                    <ul id="s-lc-event-attachment-list" class="list-unstyled">
+                        {{#file_attachment}}
+                            <li>
+                                <a href="{{link}}" target="_blank" download="{{filename}}">{{filename}}</a>
+                            </li>
+                        {{/file_attachment}}
+                    </ul>
+                {{/file_attachment.0}}
+
+                <p class="hl__add-to-calendar">
+                  <span>Add to: </span>
+                  <span>
+                      <a class="btn btn-default" href="{{google_url}}" title="Add to Google Calendar" id="s-lc-event-b-g">
+                      <span>Google Calendar</span>
+                    </a>
+                    <a class="btn btn-default" href="{{ical}}" title="Add to other calender using .ics" id="s-lc-event-b-c">
+                      <span>Other calendar (.ics)</span>
+                    </a>
+                  </span>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{#more_info}}
+<div class="row margin-top-med">
+    <div class="col-md-12">{{{more_info}}}</div>
+</div>
+{{/more_info}}
+
+<script>
+    jQuery("body").addClass("s-lc-public-evtp");
+</script>

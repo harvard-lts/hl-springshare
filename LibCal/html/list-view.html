@@ -1,0 +1,56 @@
+<!-- Admin > Events > Settings > Customize Daily List View Template -->
+<div class="media s-lc-c-evt">
+    {{#online_event}}
+        <span class="hl__eyebrow">
+            {{textOnlineEvent}}
+        </span>
+    {{/online_event}}
+
+    <div class="hl__event-list media-body">
+        <div>
+          <h2 class="media-heading s-lc-c-evt-title">
+              <a href="{{url}}">{{title}}</a>
+          </h2>
+
+          <div class="s-lc-c-evt-des">{{{shortdesc}}}</div>
+        </div>
+
+        <div class="dl-horizontal">
+            {{^multi_day_event}}
+                <div class="hl__libcal-date">{{dayfull}}, {{monthshort}} {{day}}, {{year}}</div>
+                <div class="hl__libcal-time">{{start}}{{#end}} - {{end}}{{/end}}</div>
+                <div class="hl__more-dates">
+                    {{#future_dates.0}}
+                        <a class="hl__more-dates__link" href="#" aria-label="Show more dates for {{title}}" onclick="jQuery('#future_{{id}}').toggle(); return false;" >{{textShowMoreDates}}</a>
+                        <p id="future_{{id}}" style="display:none">
+                            {{#future_dates}}
+                            <a href="/event/{{event_id}}">{{start}}</a><br>
+                            {{/future_dates}}
+                        </p>
+                    {{/future_dates.0}}
+                </div>
+            {{/multi_day_event}}
+
+            {{#multi_day_event}}
+                <div>
+                    {{^all_day_event}}{{start}},{{/all_day_event}}
+                    {{dayfull}}, {{monthshort}} {{day}}, {{year}}
+                </div>
+                <div
+                    {{^all_day_event}}{{end}},{{/all_day_event}}
+                    {{multi_day_end_date}}
+                </div>
+            {{/multi_day_event}}
+
+            <div class="hl__libcal-register">
+                {{#seats}}
+                <p><a href="{{url}}" class="hl__button--blue" aria-label="Register for {{title}}">{{textRegister}}</a></p>
+                {{/seats}}
+
+                {{#registration_msg}}
+                <p><a href="{{url}}" class="hl__button--blue">{{msg}}</a></p>
+                {{/registration_msg}}
+            </div>
+        </div>
+    </div>
+</div>

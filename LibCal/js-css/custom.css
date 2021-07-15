@@ -1778,6 +1778,7 @@ h1.s-lc-app-booking-header, h1.s-lc-appm-booking-header {
 #myschedauth .hl__header,
 #app_landing .hl__header,
 #equip_ .hl__header,
+#new_reservation .hl__header,
 .hl__header.hl__appointments,
 .hl__header.hl__spaces {
   display: none;
@@ -1786,6 +1787,7 @@ h1.s-lc-app-booking-header, h1.s-lc-appm-booking-header {
 #myschedauth .hl__header.hl__appointments,
 #app_landing .hl__header.hl__appointments,
 #equip_ .hl__header.hl__spaces,
+#new_reservation .hl__header.hl__spaces,
 .hl__header {
   display: block;
 }

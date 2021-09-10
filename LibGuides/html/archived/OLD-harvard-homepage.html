@@ -1,0 +1,104 @@
+<body class="s-lib-public-body">
+  {{skip_link}}
+  {{public_header}}
+  <div id="s-lib-public-header" class="s-lib-header container s-lib-side-borders">
+    <div class="row">
+      <div id="s-lib-bc" class="col-md-12">
+        {{breadcrumbs}}
+      </div>
+      <div id="hl-lib-sg" class="col-md-12">
+          <form role="search" class="form-inline pull-right" action="srch.php">
+              <div class="form-group">
+                  <div class="s-lg-public-search-field">
+                      <label class="control-label sr-only" for="s-lg-guide-search">Enter Search Words</label>
+                      <input class="form-control" id="s-lg-guide-search" name="q" type="text">
+                  </div>
+              </div>
+              <button class="btn btn-default" type="submit">Search All Guides</button>
+          </form>
+      </div>
+    </div>
+    <h1 id="s-lib-public-header-title">{{title}}
+    </h1>
+    <div id="s-lib-public-header-desc">{{system_intro}}
+    </div>
+  </div>
+  <div id="s-lib-public-nav" class="container s-lib-side-borders">
+    {{page_nav}}
+  </div>
+  <div id="s-lib-public-main" class="s-lib-main container s-lib-side-borders">
+    <div  id="s-lg-index-cols"  class="row">
+      <div  id="col1"  class="col-md-12 center">
+        <div class="clearfix">
+          <div id="s-lg-hp-nav">
+            <ul>
+              <li>
+                <ul class="nav nav-tabs">
+                  {{button_by_group}}
+                  {{button_by_subject}}
+                  {{button_by_type}}
+                </ul>
+              </li>
+              <li id="s-lg-hp-nav-bottom">
+                <div class="clearfix"> </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div id="s-lg-index-list" class="">
+          {{content}}
+        </div>
+      </div>
+      <div  id="col2"  class="col-md-12 center margin-top-lg">
+        {{content_boxes}}
+      </div>
+    </div>
+  </div>
+  {{system_footer}}
+  <div id="s-lib-alert" title="">
+    <div id="s-lib-alert-content"></div>
+  </div>
+  <div id="s-lib-popover-title" class="hide">
+    <span class="text-info"><strong>title</strong></span>
+    <button type="button" id="popclose" class="close" onclick="jQuery('.s-lib-popover').popover('hide')">
+      &times;
+    </button>
+  </div>
+  <div id="s-lib-popover-content" class="hide">
+    <i class="fa fa-refresh fa-spin"></i> Loading...
+    <button class="btn btn-default btn-sm popclose" type="button">Close</button>
+  </div>
+  <div id="s-lib-scroll-top" title="Back to Top">
+    <span class="fa-stack fa-lg">
+      <i class="fa fa-square-o fa-stack-2x"></i>
+      <i class="fa fa-angle-double-up fa-stack-1x" style="position:relative; bottom:2px;"></i>
+    </span>
+  </div>
+  <script>
+   $('#box').keyup(function(){
+     var valThis = $(this).val().toLowerCase();
+     var noresult = 0;
+     if(valThis == ""){
+       $('.s-lg-guide-list > li').show();
+       noresult = 1;
+       $('.no-results-found').remove();
+     } else {
+       $('.s-lg-guide-list > li').each(function(){
+         var text = $(this).text().toLowerCase();
+         var match = text.indexOf(valThis);
+         if (match >= 0) {
+           $(this).parents('.collapse').addClass("in");
+           noresult = 1;
+           $('.no-results-found').remove();
+         } else {
+           $(this).parents('.collapse').removeClass("in");
+         }
+       });
+     };
+     if (noresult == 0) {
+       $(".s-lg-guide-list").append('<li class="no-results-found">No results found.</li>');
+     }
+   });
+  </script>
+  {{public_footer}}
+</body>

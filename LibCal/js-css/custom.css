@@ -660,7 +660,7 @@ main a.dropdown-item {
   line-height: 19px;
   transition: all 0.4s ease;
 }
-.hl__button--blue:hover, .hl__button--blue:hover,
+.hl__button--blue:hover, .hl__button--blue:focus,
 .btn-primary:hover, .btn-primary:focus {
  	background:#2a5280;
  	border-color:transparent;

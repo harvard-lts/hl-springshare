@@ -1,3 +1,9 @@
+<script>
+  $(document).ready(function(){
+    $("#s-lg-guide-header-search button").html('').append('<svg width="20" height="20" viewBox="0 0 20 20" aria-label="Search" role="img" fill="white"><title>Search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg>');
+  });
+</script>
+
 <!-- SIDE NAV -->
 <body class="s-lg-guide-body hl__template">
   {{skip_link}}
@@ -7,7 +13,7 @@
   <!-- BEGIN: Page Header -->
   <div class="hl__header">
     <section class="hl__header-child">
-      <a href="/" class="hl__header-child_title hl__header-column">
+      <a href="/" class="hl__header-child__title hl__header-column">
   			<span>Research</span> Guides
   		</a>
       <div class="hl__header-child__logo">
@@ -146,9 +152,8 @@
   							<a class="hl__link-tag" href="https://staff.library.harvard.edu/" title=""><span>Staff portal</span></a>
   						</li>
               <li class="hl__footer-nav__item">
-                <a class="hl__link-tag" href="https://harvard.libapps.com/libguides/" title=""><span>LibGuides Login</span></a>
+                {{login_url_display}}
               </li>
-              <li>{{login_url_display}}</li>
   					</ul>
   				</nav>
   			</div>

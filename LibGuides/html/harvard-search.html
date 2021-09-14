@@ -1,5 +1,12 @@
+<script>
+  $(document).ready(function(){
+    $("#s-lg-srch-form button").html('').append('<svg width="20" height="20" viewBox="0 0 20 20" aria-label="Search" role="img" fill="white"><title>Search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg>');
+  });
+</script>
+
 <body class="s-lib-public-body hl__template">
   {{skip_link}}
+  {{obsolete_browser_alert}}
 
   <!-- BEGIN: Page Header -->
   <div class="hl__header">
@@ -16,89 +23,59 @@
   </div>
   <!-- END: Page Header -->
 
-  <div id="s-lib-public-header" class="container s-lib-header s-lib-side-borders">
+  <!-- BEGIN: Content Header -->
+  <div id="s-lib-public-header" class="s-lib-header container s-lib-side-borders">
     <div id="s-lib-bc" class="hidden-xs">
       {{breadcrumbs}}
     </div>
     <div id="s-lg-guide-header-info">
-      <h1 id="s-lib-public-header-title">{{title}}
-      </h1>
-      <div id="s-lib-public-header-desc">{{system_intro}}
-      </div>
-    </div>
-    <div id="hl-lib-sg">
-      <div id="s-lg-guide-search-box">
-        <form role="search" id="s-lg-guide-search-form" action="srch.php">
-          <div class="input-group input-group-sm">
-            <label class="sr-only" for="s-lg-guide-search-terms">Search all guides</label>
-            <input type="text" id="s-lg-guide-search-terms" name="q" class="form-control" placeholder="Search all guides">
-            <span class="input-group-btn">
-              <button class="btn btn-default" type="submit">
-                <svg width="20" height="20" viewBox="0 0 20 20" aria-label="Search" role="img" fill="white"><title>Search</title><path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"></path></svg>
-              </button>
-            </span>
-          </div>
-        </form>
-      </div>
-        <!-- <form role="search" class="form-inline pull-right" action="srch.php">
-            <div class="form-group">
-                <div class="s-lg-public-search-field">
-                    <label class="control-label sr-only" for="s-lg-guide-search">Enter Search Words</label>
-                    <input class="form-control" id="s-lg-guide-search" name="q" type="text">
-                </div>
-            </div>
-            <button class="btn btn-default" type="submit">Search All Guides</button>
-        </form> -->
+      <h1 id="s-lib-public-header-title">{{page_title}}</h1>
+      <div id="s-lib-public-header-desc">{{page_description}}</div>
     </div>
   </div>
+  <!-- END: Content Header -->
 
+  <!-- BEGIN: Nav Bar -->
   <div id="s-lib-public-nav" class="container s-lib-side-borders">
-    {{page_nav}}
+      {{page_nav}}
   </div>
+  <!-- END: Nav Bar -->
 
-  <div id="s-lib-public-main" class="s-lib-main container s-lib-side-borders">
-    <div  id="s-lg-index-cols"  class="row">
-      <div  id="col1"  class="col-md-12 center">
-        <div class="clearfix">
-          <div id="s-lg-hp-nav">
-            <ul class="nav nav-tabs">
-              {{button_by_group}}
-              {{button_by_subject}}
-              {{button_by_type}}
-            </ul>
+  <!-- BEGIN: content -->
+  <div id="s-lib-public-main" class="s-lib-main container s-lib-side-borders" tabindex="-1">
+      <section>
+          <div id="s-lg-srch-nav-col" class="row">
+              <div id="col0" class="col-md-12 center">
+                  {{content_box_search}}
+              </div>
+              <div id="s-lg-srch-results-msg" class="col-md-12 margin-bottom-sm"></div>
           </div>
-        </div>
-        <div id="s-lg-index-list" class="">
-          {{content}}
-        </div>
-      </div>
-      <div  id="col2"  class="col-md-12 center margin-top-lg">
-        {{content_boxes}}
-      </div>
-    </div>
+      </section>
+      <section>
+          <div id="s-lg-srch-cols" class="row">
+              {{content}}
+          </div>
+      </section>
   </div>
+  <!-- END: content -->
 
   <div id="s-lib-alert" title="">
-    <div id="s-lib-alert-content"></div>
+      <div id="s-lib-alert-content"></div>
   </div>
-
   <div id="s-lib-popover-title" class="hide">
-    <span class="text-info"><strong>title</strong></span>
-    <button type="button" id="popclose" class="close" onclick="jQuery('.s-lib-popover').popover('hide')">
-      &times;
-    </button>
+      <span class="text-info"><strong>title</strong></span>
+      <button type="button" id="popclose" class="close" onclick="jQuery('.s-lib-popover').popover('hide')">&times;</button>
   </div>
-
-  <div id="s-lib-popover-content" class="hide">
-    <i class="fa fa-refresh fa-spin"></i> Loading...
-    <button class="btn btn-default btn-sm popclose" type="button">Close</button>
+  <div id="s-lib-popover-content" class="hide"><i class="fa fa-refresh fa-spin"></i> Loading...
+      <button class="btn btn-default btn-sm popclose" type="button">Close</button>
   </div>
-
-  <div id="s-lib-scroll-top" title="Back to Top">
-    <span class="fa-stack fa-lg">
-      <i class="fa fa-square-o fa-stack-2x"></i>
-      <i class="fa fa-angle-double-up fa-stack-1x" style="position:relative; bottom:2px;"></i>
-    </span>
+  <div id="s-lib-scroll-top">
+      <a href="javascript:void(0);" onclick="jQuery('body').focus();" title="Back to Top" aria-label="Back to Top">
+          <span class="fa-stack fa-lg" aria-hidden="true">
+              <i class="fa fa-square-o fa-stack-2x"></i>
+              <i class="fa fa-angle-double-up fa-stack-1x" style="position:relative; bottom:2px;"></i>
+          </span>
+      </a>
   </div>
 
   <!-- BEGIN: Custom Footer -->
@@ -191,30 +168,3 @@
   </section>
   <!-- END: Custom Footer -->
 </body>
-
-<script>
- $('#box').keyup(function(){
-   var valThis = $(this).val().toLowerCase();
-   var noresult = 0;
-   if(valThis == ""){
-     $('.s-lg-guide-list > li').show();
-     noresult = 1;
-     $('.no-results-found').remove();
-   } else {
-     $('.s-lg-guide-list > li').each(function(){
-       var text = $(this).text().toLowerCase();
-       var match = text.indexOf(valThis);
-       if (match >= 0) {
-         $(this).parents('.collapse').addClass("in");
-         noresult = 1;
-         $('.no-results-found').remove();
-       } else {
-         $(this).parents('.collapse').removeClass("in");
-       }
-     });
-   };
-   if (noresult == 0) {
-     $(".s-lg-guide-list").append('<li class="no-results-found">No results found.</li>');
-   }
- });
-</script>

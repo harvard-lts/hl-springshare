@@ -536,18 +536,19 @@ p, .container ul, .container li {
 a {
 	font-family: "Trueno","Montserrat",sans-serif;
 }
-main a, .btn-link {
+main a, .btn-link, #s-lc-public-pd a {
 	font-size:19px;
 	color:#0579b8;
 	font-weight:600;
   text-decoration: none;
 	transition:border 0.28s cubic-bezier(0.28,1.08,1,0.96);
 }
-main a:not(.btn) {
+main a:not(.btn), #s-lc-public-pd a {
   border-bottom: 3px solid transparent;
 }
 main a:hover, main a:focus,
-.btn-link:hover, .btn-link:focus {
+.btn-link:hover, .btn-link:focus,
+#s-lc-public-pd a:hover, #s-lc-public-pd a:focus {
 	border-color: rgba(5,121,184,0.3);
 	text-decoration: none;
 	background: none;
@@ -660,7 +661,7 @@ main a.dropdown-item {
   line-height: 19px;
   transition: all 0.4s ease;
 }
-.hl__button--blue:hover, .hl__button--blue:hover,
+.hl__button--blue:hover, .hl__button--blue:focus,
 .btn-primary:hover, .btn-primary:focus {
  	background:#2a5280;
  	border-color:transparent;
@@ -1125,6 +1126,10 @@ button.btn-default.dropdown-toggle:focus .caret {
 #s-lc-public-pd {
   max-width: 930px;
 }
+#s-lc-public-pd a {
+  font-size: 26px;
+  font-style: normal;
+}
 body:not(#app) #s-lc-public-pd {
 	font-size: 26px;
 	line-height: 40px;
@@ -1132,7 +1137,7 @@ body:not(#app) #s-lc-public-pd {
   margin-bottom: 40px;
 }
 @media (max-width:480px) {
-  #s-lc-public-pd {
+  #s-lc-public-pd,  #s-lc-public-pd a {
     font-size: 22px;
     line-height: 34px;
     margin-bottom: 20px;

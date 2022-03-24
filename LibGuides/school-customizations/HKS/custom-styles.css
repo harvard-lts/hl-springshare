@@ -1,0 +1,131 @@
+<link rel="Shortcut icon" href="http://www.hks.harvard.edu/favicon.ico" type="image/x-icon">
+
+<style>
+/*hide search box label*/
+#hl-lib-sg form span {
+     display: none;
+}
+/*leftalign header text*/
+#s-lib-public-header-title {
+     text-align: left;
+}
+/*style the search button*/
+.btn-default {
+     background-color: #00739a;
+     color: #fff;
+     border-color: #00739a;
+}
+/*style the hover for the search button*/
+.btn-default:hover {
+     color: #00739a;
+     border-color: #00739a;
+     background-color: #fff;
+}
+/*style the ask us button*/
+.btn-info {
+     background-color: #00739a;
+     color: #fff;
+     border-color: #00739a;
+    font-weight: bold;
+}
+/*style the hover for the ask us button*/
+ .btn-info:hover {
+     color: #00739a;
+     border-color: #00739a;
+     background-color: #fff;
+    font-weight: bold;
+}
+</style><style>.s-lib-profile-subjects {
+    display: none;
+}
+#s-lg-profile-cols #col3 {
+    display: none;
+}
+ #fa-info-circle {
+     display: none;
+}
+ </style> <style> .s-lib-box-content .s-lib-popover {
+     display: none;
+}
+ </style><style>.s-lib-profile-email .label-info {
+     background-color: #00739a;
+     font-weight: bold;
+     color: #ffffff;
+}
+.s-lib-profile-email .label-info:hover {
+     background-color: #00739a;
+}
+ </style><style> body {
+    padding-top: 5px;
+     padding-right: 90px;
+     padding-bottom: 12px;
+     padding-left: 90px;
+}
+ </style><style>#s-lg-guide-tabs-title-bar {
+     display:none;
+}
+#s-lg-guide-desc-container {
+     margin-bottom:35px;
+     max-width:1250px;
+}
+.s-lib-box-content {
+     font-size:18px;
+     max-width:840px;
+     padding: 10px 10px 10px 0px;
+     font-weight:400;
+     color:#555;
+     line-height:1.6em;
+}
+.s-lib-box-content p {
+     margin-bottom:25px;
+}
+#s-lg-guide-description {
+     max-width:1000px;
+     font-size:18px;
+}
+ .s-lg-tabs-side-toggle {
+     display:none;
+}
+ .s-lg-tabs-side {
+     display:block;
+}
+ .guide-menu-container {
+     display:none;
+}
+ .s-lg-tabs-side .affix {
+     top:20px;
+     width:213px;
+     position:fixed;
+}
+ .s-lg-subtab-ul.affix {
+     position:relative;
+     top:0;
+}
+ .s-lg-tabs-side-toggle {
+     display:none;
+}
+ .s-lg-tabs-side {
+     display:block;
+}
+ .guide-menu-container {
+     display:none;
+}
+ .s-lg-tabs-side .affix {
+     top:20px;
+     width:213px;
+     position:fixed;
+}
+ .s-lg-subtab-ul.affix {
+     position:relative;
+     top:0;
+}
+ .fa-info-circle {
+     font-size: 1em;
+     color: #666;
+}
+ .fa-info-circle {
+     font-size: 1em;
+     color: #666;
+     vertical-align: 0%;
+}
+</style>

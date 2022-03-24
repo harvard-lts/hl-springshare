@@ -1,0 +1,64 @@
+/* Chat widget customizations */
+/* Who monitors the widget: FAS General Chat */
+/* Follow up ticket queue: FAS General */
+/* Widget type: Slide-out-tab */
+/* Direction: Right to left */
+/* Width: 100% */
+/* Height: 340px */
+/* When chat is offline: Enable LibAnswers search */
+
+/* Custom CSS */
+h2, #s-lch-status {
+	font-family:'TruenoBold',sans-serif;
+	/*color:#1E1E1E;
+*/	font-size:20px;
+	line-height:30px;
+	text-transform:uppercase;
+	letter-spacing:1.5px;
+}
+
+#offline button, #s-lch-post-submit, .s-lch-msg-sys .s-lch-msg-txt button {
+    text-transform: uppercase;
+    letter-spacing: 1.17px;
+    font-family: "TruenoRegular", sans-serif;
+    background: #0579b8 !important;
+    border-color: transparent !important;
+    transition:all 0.4s ease;
+    -webkit-transition:all 0.4s ease;
+}
+
+#offline button:hover, #offline button:focus,
+#s-lch-post-submit:hover, #s-lch-post-submit:focus,
+.s-lch-msg-sys .s-lch-msg-txt  button:hover, .s-lch-msg-sys .s-lch-msg-txt  button:focus {
+    background: #2a5280 !important;
+    border-color: transparent !important;
+    color:#fff;
+}
+
+#s-lch-post-submit[disabled], #s-lch-post-submit[disabled]:hover {
+	cursor:not-allowed;
+	color: #6c6c6c !important;
+    background: #6c6c6c7d !important;
+    border: transparent !important;
+}
+
+.s-lch-offline-msg, .s-lch-msg-txt {
+    font-family:'Lora',Georgia,serif;
+	/*color:#414141;*/
+	font-size:15px;
+	line-height:26px;
+}
+
+.s-la-widget a {
+    font-family:'TruenoLight',sans-serif;
+	color:#0579b8;
+	font-weight:700;
+	transition:border 0.28s cubic-bezier(0.28,1.08,1,0.96);
+	-webkit-transition:border 0.28s cubic-bezier(0.28,1.08,1,0.96);
+}
+
+.s-la-widget a:focus, .s-la-widget a:hover{
+	color:#0579b8;
+	border-bottom:3px solid rgba(5,121,184,0.3);
+	text-decoration:none;
+}

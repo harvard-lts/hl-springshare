@@ -22,11 +22,3 @@ Would also want to remove ```body.hl__template``` from beginning of all header/f
 Could also use this opportunity to create a template for how to create own similar header with their school logo in the top right + update the background color.
 
 Add favicon?
-
-If you don't want our footer, can you include the system default one? Try adding this code into the footer section:
-
-```
-<!-- BEGIN: Page Footer -->
-    {{system_footer}}
-<!-- END: Page Footer -->
-```

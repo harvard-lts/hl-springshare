@@ -1,0 +1,243 @@
+/*LOCAL FONT LOAD-IN*/
+/* @font-face {
+    font-family: "Trueno";
+    src: url("https://library.harvard.edu/themes/custom/harvard/assets/fonts/truenorg-webfont.woff2") format("woff2"), url("https://library.harvard.edu/themes/custom/harvard/assets/fonts/truenorg-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Trueno";
+    src: url("https://library.harvard.edu/themes/custom/harvard/assets/fonts/truenorgit-webfont.woff2") format("woff2"), url("https://library.harvard.edu/themes/custom/harvard/assets/fonts/truenorgit-webfont.woff") format("woff");
+    font-weight: normal;
+    font-style: italic
+}
+
+@font-face {
+    font-family: "Trueno";
+    src: url("https://library.harvard.edu/themes/custom/harvard/assets/fonts/truenoultlt-webfont.woff2") format("woff2"), url("https://library.harvard.edu/themes/custom/harvard/assets/fonts/truenoultlt-webfont.woff") format("woff");
+    font-weight: 100;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Trueno";
+    src: url("https://library.harvard.edu/themes/custom/harvard/assets/fonts/truenoultltit-webfont.woff2") format("woff2"), url("https://library.harvard.edu/themes/custom/harvard/assets/fonts/truenoultltit-webfont.woff") format("woff");
+    font-weight: 100;
+    font-style: italic
+}
+
+@font-face {
+    font-family: "Trueno";
+    src: url("https://library.harvard.edu/themes/custom/harvard/assets/fonts/truenolt-webfont.woff2") format("woff2"), url("https://library.harvard.edu/themes/custom/harvard/assets/fonts/truenolt-webfont.woff") format("woff");
+    font-weight: 200;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Trueno";
+    src: url("https://library.harvard.edu/themes/custom/harvard/assets/fonts/truenoltit-webfont.woff2") format("woff2"), url("https://library.harvard.edu/themes/custom/harvard/assets/fonts/truenoltit-webfont.woff") format("woff");
+    font-weight: 200;
+    font-style: italic
+}
+
+@font-face {
+    font-family: "Trueno";
+    src: url("https://library.harvard.edu/themes/custom/harvard/assets/fonts/truenosbd-webfont.woff2") format("woff2"), url("https://library.harvard.edu/themes/custom/harvard/assets/fonts/truenosbd-webfont.woff") format("woff");
+    font-weight: 600;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Trueno";
+    src: url("https://library.harvard.edu/themes/custom/harvard/assets/fonts/truenosbdit-webfont.woff2") format("woff2"), url("https://library.harvard.edu/themes/custom/harvard/assets/fonts/truenosbdit-webfont.woff") format("woff");
+    font-weight: 600;
+    font-style: italic
+}
+
+@font-face {
+    font-family: "Trueno";
+    src: url("https://library.harvard.edu/themes/custom/harvard/assets/fonts/truenobd-webfont.woff2") format("woff2"), url("https://library.harvard.edu/themes/custom/harvard/assets/fonts/truenobd-webfont.woff") format("woff");
+    font-weight: 700;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Trueno";
+    src: url("https://library.harvard.edu/themes/custom/harvard/assets/fonts/truenobdit-webfont.woff2") format("woff2"), url("https://library.harvard.edu/themes/custom/harvard/assets/fonts/truenobdit-webfont.woff") format("woff");
+    font-weight: 700;
+    font-style: italic
+}
+
+@font-face {
+    font-family: "Trueno";
+    src: url("https://library.harvard.edu/themes/custom/harvard/assets/fonts/truenoblk-webfont.woff2") format("woff2"), url("https://library.harvard.edu/themes/custom/harvard/assets/fonts/truenoblk-webfont.woff") format("woff");
+    font-weight: 800;
+    font-style: normal
+}
+
+@font-face {
+    font-family: "Trueno";
+    src: url("https://library.harvard.edu/themes/custom/harvard/assets/fonts/truenoblkit-webfont.woff2") format("woff2"), url("https://library.harvard.edu/themes/custom/harvard/assets/fonts/truenoblkit-webfont.woff") format("woff");
+    font-weight: 800;
+    font-style: italic
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,700;1,400;1,700&display=swap'); */
+
+/*FONT SMOOTHING*/
+html {
+   -moz-osx-font-smoothing: grayscale;
+   -webkit-font-smoothing: antialiased;
+}
+
+body {
+  font-family: 'Lora', serif;
+}
+
+.s-la-widget {
+    background-color: transparent;
+    /* padding: 0;
+    margin: -60px 0 60px 0; */
+}
+
+.s-la-widget a, .s-la-widget a:visited, .s-la-widget a:active {
+    border-bottom: 3px solid transparent;
+    color: #0579b8;
+    font-family: "Trueno",sans-serif;
+    font-weight: 700;
+    text-decoration: none;
+    -webkit-transition: border 0.28s cubic-bezier(0.28,1.08,1,0.96);
+    transition: border 0.28s cubic-bezier(0.28,1.08,1,0.96);
+}
+
+.s-la-widget a:hover {
+    border-bottom: 3px solid rgba(5,121,184,0.3);
+    text-decoration: none;
+}
+
+.s-la-widget h2.color_head {
+    color: #1e1e1e;
+    font-family: 'Trueno', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+}
+
+.s-la-widget h2#s-lch-welcome {
+    font-size: 18px;
+    line-height: 24px;
+}
+
+#s-lch-login-form {
+    font-family: 'Trueno', sans-serif;
+}
+
+#s-lch-login-form .control-label {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 32px;
+    margin-bottom: 0;
+}
+
+#s-lch-login-form .form-group {
+    margin-bottom: 24px;
+}
+
+#s-lch-login-form label {
+    font-weight: 600;
+}
+
+.s-la-widget .input-sm {
+    font-weight: 300;
+}
+
+input, textarea, select {
+  font-size: 19px !important;
+  padding: 0 10px !important;
+  border-radius: 4px !important;
+  font-family: "Lora", Georgia, serif !important;
+  height: 45px !important;
+  width: 100% !important;
+  border: 1px solid #1e1e1e !important;
+}
+select {
+  cursor: pointer;
+}
+.s-la-widget .form-control {
+    color:#1e1e1e;
+}
+
+.btn-chat.btn.btn-xs.btn-fullWidth {
+    border: 2px solid transparent;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-block;
+    font-family: 'Trueno', sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1.17px;
+    line-height: 19px;
+    padding: 12px 23px;
+    text-decoration: none;
+    text-transform: uppercase;
+    -webkit-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+.s-la-widget .btn-fullWidth {
+    width: auto;
+}
+
+.s-la-widget .btn-chat:hover, .s-la-widget .btn-chat:active, .s-la-widget .btn-chat:focus, .s-la-widget .btn-chat[disabled] {
+    color:#fff;
+    background-color:#2a5280;
+    border-color:#2a5280;
+}
+
+.s-lch-offline-msg {
+    font-family: 'Lora', serif;
+    font-size: 19px;
+}
+
+/* fake header + form padding */
+.s-la-widget {
+    background-color: transparent;
+    padding: 0;
+    margin: -60px 0 60px 0;
+}
+.s-la-widget .container {
+   margin: 0;
+   width: 100% !important;
+}
+.s-la-widget .chatpane {
+    padding-right: 0;
+}
+.s-la-widget h2#s-lch-welcome {
+    font-size: 18px;
+    line-height: 24px;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding: 0px 25px;
+    background-image: linear-gradient(-46deg, #0579b8 0%, #2a5280 100%);
+    color: #fff;
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 1.52px;
+    line-height: 60px;
+}
+.s-la-widget h2#s-lch-welcome::after {
+  content: " chat with us";
+  font-family: "Lora", Georgia, sans-serif;
+  font-size: 24px;
+  line-height: 1.3;
+  font-style: italic;
+  font-weight: 400;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+#s-lch-login-form {
+  margin: 60px auto;
+  max-width: 930px;
+  padding: 0px 20px;
+}

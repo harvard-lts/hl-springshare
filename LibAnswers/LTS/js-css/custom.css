@@ -986,6 +986,11 @@ button.libchat_offline:hover, button.libchat_offline:focus {
 	display:none;
 }
 
+/*hide Contact Us box (we use directly embedded form instead) */
+.s-labox-box105635-container, .s-la-box105635 {
+	display:none;
+}
+
 /*remove springshare footer info*/
 #s-la-public-footer {
 	display:none;

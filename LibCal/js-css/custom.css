@@ -1778,21 +1778,26 @@ h1.s-lc-app-booking-header, h1.s-lc-appm-booking-header {
   display: none;
 }
 
-/* header areas */
+/* hide header areas */
 #app .hl__header,
 #myschedauth .hl__header,
 #app_landing .hl__header,
 #equip_ .hl__header,
 #new_reservation .hl__header,
+#map .hl__header,
 .hl__header.hl__appointments,
 .hl__header.hl__spaces {
   display: none;
 }
+/* show appointments header */
 #app .hl__header.hl__appointments,
 #myschedauth .hl__header.hl__appointments,
 #app_landing .hl__header.hl__appointments,
+/* show library services header */
 #equip_ .hl__header.hl__spaces,
 #new_reservation .hl__header.hl__spaces,
+#map .hl__header.hl__spaces,
+/* show events calendar header */
 .hl__header {
   display: block;
 }

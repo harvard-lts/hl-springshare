@@ -662,17 +662,17 @@ body:not(.s-la-page-home) .hl__asklib--header svg {
 
 /* ALERT MESSAGE */
 
-.hl__asklib__alert--off {
+.hl__lts__alert--off {
 	display: none;
 }
 
-.hl__asklib__alert {
+.hl__lts__alert {
 	background: white url("https://harvard-library-web-team.gitlab.io/Harvard-Patterns/assets/images/dots.png") top center repeat;
 	padding: 20px;
 	margin-bottom: 60px;
 }
 
-.hl__asklib__details {
+.hl__lts__details {
 	display: grid;
 	grid-template-columns: 155px minmax(auto, 710px);
 	grid-gap: 0 20px;
@@ -682,7 +682,7 @@ body:not(.s-la-page-home) .hl__asklib--header svg {
 	max-width: 930px;
 }
 
-.hl__asklib__alert--title {
+.hl__lts__alert--title {
   font-family: "Trueno", "Montserrat", sans-serif;
   font-size: 15px;
   font-weight: 600;
@@ -692,7 +692,7 @@ body:not(.s-la-page-home) .hl__asklib--header svg {
   align-self: center;
 }
 
-.hl__asklib__alert--description {
+.hl__lts__alert--description {
 	font-family: "Trueno", "Montserrat", sans-serif;
 	font-size: 17px !important;
 	line-height: 30px !important;

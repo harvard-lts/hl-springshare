@@ -5,11 +5,11 @@
 <link rel="stylesheet" type="text/css" href="//libapps.s3.amazonaws.com/sites/61/include/trueno.css">
 
 <script src="https://api2.libanswers.com/1.0/widgets/8323"></script>
-/* Commented out the next two lines, which load the LibChat slider widget, since LTS is not using LibChat. --20220325 ehk */
+<!-- Commented out the next two lines, which load the LibChat slider widget, since LTS is not using LibChat. --20220325 ehk
 /*
 <script src="https://v2.libanswers.com/load_chat.php?hash=e51326de242dae8568d89faec0d175ef"></script>
 <script src="https://ask.library.harvard.edu/load_chat.php?hash=e807aada1fa7fa30ce04e26f09326529"></script>
-*/
+*/ -->
 
 <script>
 $(document).ready(function() {
@@ -945,10 +945,15 @@ button.libchat_offline:hover, button.libchat_offline:focus {
 .s-srch-top-header {
 	display:none;
 }
-.s-srch-askbutton p.alert.alert-info {
+.s-srch-askbutton p.alert.alert-info { 
+	display:none;
+}
+
+/* This was the AskLib behavior, commented out to replace with display:none 7/16/22 --ehk {
 	background-color:transparent;
 	border-color:transparent;
-}
+}*/
+
 .s-srch-askbutton .alert {
 	padding:0;
 }

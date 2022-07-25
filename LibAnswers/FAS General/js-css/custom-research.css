@@ -398,6 +398,16 @@ body:not(.s-la-page-home)  .navbar-form .s-la-content-search-query {
 		max-width: 100%;
 	}
 }
+/* need to add this for homepage width to work */
+@media (min-width: 100px) {
+	.navbar-form .s-la-content-search-query {width: 600px; display:block;}
+}
+@media (min-width: 992px) {
+	.navbar-form .s-la-content-search-query {width: 800px;}
+}
+@media (min-width: 1200px) {
+	.navbar-form .s-la-content-search-query {width: 1010px;}
+}
 
 /*WIDTH OF SEARCH BUTTON*/
 .col-xs-3.s-la-searchform-buttoncol {
@@ -426,7 +436,7 @@ button.s-la-searchform-button, .s-la-searchform-button:active, .s-la-searchform-
 }
 
 /*RIGHT FACING ARROW > */
-button.s-la-searchform-button::after, #s-la-content-link-73477 a::after {
+button.s-la-searchform-button::after {
 	border-bottom: 0.425em solid transparent;
 	border-left: 0.5em solid currentColor;
 	border-top: 0.425em solid transparent;
@@ -505,24 +515,13 @@ body:not(.s-la-page-home) #s-la-searchform-107376:before {
 	padding-right:40px;
 }
 
-/*SEE ALL FAQs*/
-/* #s-la-content-link-73477 {
-	text-align: right;
-
-}
-#s-la-content-link-73477 a {
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	font-size: 14px;
-} */
-
 /*WIDTH OF ANSWERS*/
-#s-srch-source-0 .row .col-md-9, #s-la-box-93424-container, .s-la-content-faqlist  {
+#s-srch-source-0 .row .col-md-9, #s-la-box-108687-container, .s-la-content-faqlist  {
 	max-width:930px;
 }
 
 /* HOLLIS FAQs BOX */
-#s-la-content-text-92770 p {
+#s-la-content-text-108311 p {
 	padding-bottom: 0;
 }
 
@@ -555,7 +554,7 @@ body:not(.s-la-page-home) #s-la-searchform-107376:before {
 
 
 /*CHAT-EMAIL-MEET*/
-#s-la-box-93426-container {
+#s-la-box-108683-container {
 	padding:40px 0;
 	border-top:1px solid rgb(192,192,192);
 }

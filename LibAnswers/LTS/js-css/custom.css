@@ -5,11 +5,11 @@
 <link rel="stylesheet" type="text/css" href="//libapps.s3.amazonaws.com/sites/61/include/trueno.css">
 
 <script src="https://api2.libanswers.com/1.0/widgets/8323"></script>
-/* Commented out the next two lines, which load the LibChat slider widget, since LTS is not using LibChat. --20220325 ehk */
+<!-- /* Commented out the next two lines, which load the LibChat slider widget, since LTS is not using LibChat. --20220325 ehk */ 
 /*
 <script src="https://v2.libanswers.com/load_chat.php?hash=e51326de242dae8568d89faec0d175ef"></script>
 <script src="https://ask.library.harvard.edu/load_chat.php?hash=e807aada1fa7fa30ce04e26f09326529"></script>
-*/
+*/ -->
 
 <script>
 $(document).ready(function() {
@@ -662,17 +662,17 @@ body:not(.s-la-page-home) .hl__asklib--header svg {
 
 /* ALERT MESSAGE */
 
-.hl__asklib__alert--off {
+.hl__lts__alert--off {
 	display: none;
 }
 
-.hl__asklib__alert {
+.hl__lts__alert {
 	background: white url("https://harvard-library-web-team.gitlab.io/Harvard-Patterns/assets/images/dots.png") top center repeat;
 	padding: 20px;
 	margin-bottom: 60px;
 }
 
-.hl__asklib__details {
+.hl__lts__details {
 	display: grid;
 	grid-template-columns: 155px minmax(auto, 710px);
 	grid-gap: 0 20px;
@@ -682,7 +682,7 @@ body:not(.s-la-page-home) .hl__asklib--header svg {
 	max-width: 930px;
 }
 
-.hl__asklib__alert--title {
+.hl__lts__alert--title {
   font-family: "Trueno", "Montserrat", sans-serif;
   font-size: 15px;
   font-weight: 600;
@@ -692,7 +692,7 @@ body:not(.s-la-page-home) .hl__asklib--header svg {
   align-self: center;
 }
 
-.hl__asklib__alert--description {
+.hl__lts__alert--description {
 	font-family: "Trueno", "Montserrat", sans-serif;
 	font-size: 17px !important;
 	line-height: 30px !important;
@@ -945,10 +945,15 @@ button.libchat_offline:hover, button.libchat_offline:focus {
 .s-srch-top-header {
 	display:none;
 }
-.s-srch-askbutton p.alert.alert-info {
+.s-srch-askbutton p.alert.alert-info { 
+	display:none;
+}
+
+/* This was the AskLib behavior, commented out to replace with display:none 7/16/22 --ehk {
 	background-color:transparent;
 	border-color:transparent;
-}
+}*/
+
 .s-srch-askbutton .alert {
 	padding:0;
 }
@@ -983,6 +988,11 @@ button.libchat_offline:hover, button.libchat_offline:focus {
 
 /*hide question meta data (last updated, views)*/
 .s-la-faq-listing-meta, .s-srch-result-meta {
+	display:none;
+}
+
+/*hide Contact Us box (we use directly embedded form instead) */
+.s-labox-box105635-container, .s-la-box105635 {
 	display:none;
 }
 

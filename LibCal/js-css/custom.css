@@ -1604,8 +1604,9 @@ table#s-lc-monthly-event-calendar-0 {
   }
 }
 @media(max-width:479px){
-  .hl__event-info .hl__event-info__date-time > span .hl__more-dates__link {
-  word-break: normal;
+  .hl__event-info .hl__event-info__date-time > span.hl__more-dates {
+    display: block;
+    word-break: normal;
   }
 }
 .hl__event-info .hl__event-info__date-time > span:not(:last-child) {

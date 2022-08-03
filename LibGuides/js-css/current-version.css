@@ -616,7 +616,7 @@ body.hl__template .s-lib-box-content ul:not(.nav-tabs) ul {
 body.hl__template .s-lib-box-content li ul:not(.nav-tabs) {
   margin-top: 0.5em;
 }
-body.hl__template .s-lib-box-content ul:not(.nav-tabs) li:before {
+body.hl__template .s-lib-box-content ul:not(.nav-tabs) > li:before {
   color: #eb001b;
   content: '\2022';
   display: inline-block;

@@ -38,6 +38,11 @@ body.hl__template > .container {
   padding: 0 20px;
 }
 
+/* Skip to main content link */
+body.hl__template > #s-lg-public-skiplink {
+  background: white;
+}
+
 /*------------------------------------------------------------*/
 
 /*FONT STLYES*/
@@ -286,6 +291,16 @@ body.hl__template .btn-primary:hover, body.hl__template .btn-primary:focus {
   background-color:#2a5280 !important;
 }
 
+/* adding default focus back to elements */
+body.hl__template .btn:focus, 
+body.hl__template a:focus, 
+body.hl__template .nav>li>a:focus /* guide sidenav */ {
+    outline: -webkit-focus-ring-color auto 1px;
+}
+body.hl__template .nav>li>a:focus {
+  margin-bottom: 1px;
+}
+
 /*------------------------------------------------------------*/
 
 /* HEADER */
@@ -323,6 +338,9 @@ body.hl__template a.hl__header-child__title:focus {
 	background:linear-gradient(-46deg,#0579b8 0%,#2a5280 100%);
 	text-decoration:none;
   border: none;
+}
+body.hl__template a.hl__header-child__title:focus {
+  outline: #c0c0c0 auto 1px;
 }
 body.hl__template .hl__header-child__title span {
   font-size: 26px;
@@ -656,6 +674,7 @@ body.hl__template #s-lg-tabs-container .nav-tabs>.active>a {
   background-color: #6c6c6c;
   color: #fff;
   font-weight: 400;
+  outline: 0;
 }
 body.hl__template #s-lg-tabs-container .nav-tabs > .active > a::after {
   border-top-color:#6c6c6c;
@@ -733,7 +752,7 @@ body.hl__template #s-lg-srch-input-q {
   font-family: "Trueno","Montserrat",sans-serif;
   height: 45px;
   min-width: 360px;
-  color: #6c6c6c;
+  color: #414141;
   font-weight: 200;
   font-size: 16px;
 }
@@ -742,6 +761,10 @@ body.hl__template #s-lg-srch-input-q {
   body.hl__template #s-lg-srch-input-q {
      min-width: 233px;
   }
+}
+body.hl__template input::placeholder {
+  font-weight: 400;
+  color: #6c6c6c;
 }
 
 /* layout */
@@ -783,9 +806,12 @@ body.hl__template #s-lg-guide-search-box {
   border-radius: 3px
 }
 body.hl__template .form-control {
-  border: none;
+  border: transparent;
   box-shadow: none;
   -webkit-box-shadow: none
+}
+body.hl__template .form-control:focus {
+  outline: -webkit-focus-ring-color auto 1px;
 }
 @media (min-width: 992px) {
   body.hl__template #s-lg-guide-header,

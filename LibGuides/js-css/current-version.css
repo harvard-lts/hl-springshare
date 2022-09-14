@@ -805,10 +805,14 @@ body.hl__template #s-lg-guide-search-box {
   border: 1px solid #6c6c6c;
   border-radius: 3px
 }
-body.hl__template .form-control {
+body.hl__template .form-control:not(#slug) {
   border: transparent;
   box-shadow: none;
   -webkit-box-shadow: none
+}
+body.hl__template .form-control#type_id,
+body.hl__template .form-control#group_id {
+  border: 1px solid #6c6c6c;
 }
 body.hl__template .form-control:focus {
   outline: -webkit-focus-ring-color auto 1px;

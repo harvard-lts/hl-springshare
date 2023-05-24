@@ -13,6 +13,9 @@
 
 <script>
 $(document).ready(function() {
+	var referrer = decodeURIComponent(location.search).replace('?referrer=', '');
+    $("textarea#pdetails_109153").val(referrer); 
+
 	if ($(window).width() < 430) {
         $("#s-la-content-search-query-7255").attr('placeholder', 'Try "Zotero"');
     }

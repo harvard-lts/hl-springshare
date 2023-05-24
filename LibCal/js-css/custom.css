@@ -59,9 +59,17 @@ $(document).ready(function(){
     const appLocation = $(this).html().replace(" - ",":<br>");
     $(this).html(appLocation);
   });
+  
+  $(".s-lc-event-dl span:last-child .s-lc-event-category-link:last-child").each(function(){
+    const lastCategoryDetail = $(".s-lc-event-dl span:last-child .s-lc-event-category-link:last-child").html().replace(",","");
+	  $(".s-lc-event-dl span:last-child .s-lc-event-category-link:last-child").html(lastCategoryDetail);
+  });
 
-  const lastCategory = $(".s-lc-event-dl span:last-child .s-lc-event-category-link:last-child").html().replace(",","");
-	$(".s-lc-event-dl span:last-child .s-lc-event-category-link:last-child").html(lastCategory);
+  $(".s-lc-c-evt .s-ls-c-evt-category:last-child").each(function(){
+    const lastCategoryMain = $(".s-lc-c-evt .s-ls-c-evt-category:last-child").html().replace(",","");
+    $(".s-lc-c-evt .s-ls-c-evt-category:last-child").html(lastCategoryMain);
+  });
+  
 
 });
 </script>
@@ -1590,8 +1598,16 @@ table#s-lc-monthly-event-calendar-0 {
 .hl__event-info {
   margin-right: 20px;
 }
-.hl__event-info .hl__event-info__date-time > span {
+@media(min-width:480px){
+  .hl__event-info .hl__event-info__date-time > span {
   white-space: nowrap;
+  }
+}
+@media(max-width:479px){
+  .hl__event-info .hl__event-info__date-time > span.hl__more-dates {
+    display: block;
+    word-break: normal;
+  }
 }
 .hl__event-info .hl__event-info__date-time > span:not(:last-child) {
 	margin-right: 10px;
@@ -1765,6 +1781,54 @@ h1.s-lc-app-booking-header, h1.s-lc-appm-booking-header {
 /*------------------------------------------------------------------------------*/
 
 
+/* MAIN EVENT PAGE */
+#index_php #s-lc-public-header {
+  padding: 0;
+}
+#index_php h1#s-lc-public-header-title {
+  margin: 0;
+  font-size: 60px;
+  line-height: 74px;
+}
+/* browse by calendar dropdown */
+.s-lc-content-callist button.dropdown-toggle {
+  font-family:"Trueno","Montserrat",sans-serif;
+  font-size: 16px;
+  line-height: 19px;
+  padding: 12px;
+  background: #6c6c6c;
+  border-color: #6c6c6c;
+}
+.s-lc-content-callist button.dropdown-toggle:hover, 
+.s-lc-content-callist button.dropdown-toggle:focus,
+.s-lc-content-callist .open > .dropdown-toggle.btn-info {
+  background: #414141;
+  border-color: #414141;
+}
+.s-lc-content-callist .dropdown-menu > li > a {
+  border-bottom: 0;
+}
+.s-lc-content-callist-intro {
+	font-family: "Trueno", "Montserrat",sans-serif;
+	padding-right: 10px;
+}
+
+/*  */
+#index_php .hl__event-list dl {
+  display: grid;
+  grid-template-columns: 125px auto;
+  font-family: "Trueno", "Montserrat",sans-serif;
+  font-size: 16px;
+  margin-top: 15px;
+  color: #414141;
+}
+#index_php .hl__event-list dl a {
+  font-size: 16px;
+}
+
+/*------------------------------------------------------------------------------*/
+
+
 /*HIDE ELEMENTS*/
 #s-lc-public-bc /* breadcrumbs */,
 .dropdown-menu .popover-title /* 'filter by' dropdown titles */,
@@ -1778,21 +1842,26 @@ h1.s-lc-app-booking-header, h1.s-lc-appm-booking-header {
   display: none;
 }
 
-/* header areas */
+/* hide header areas */
 #app .hl__header,
 #myschedauth .hl__header,
 #app_landing .hl__header,
 #equip_ .hl__header,
 #new_reservation .hl__header,
+#map .hl__header,
 .hl__header.hl__appointments,
 .hl__header.hl__spaces {
   display: none;
 }
+/* show appointments header */
 #app .hl__header.hl__appointments,
 #myschedauth .hl__header.hl__appointments,
 #app_landing .hl__header.hl__appointments,
+/* show library services header */
 #equip_ .hl__header.hl__spaces,
 #new_reservation .hl__header.hl__spaces,
+#map .hl__header.hl__spaces,
+/* show events calendar header */
 .hl__header {
   display: block;
 }

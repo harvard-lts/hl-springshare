@@ -36,7 +36,7 @@ Admin > FAQ Groups > Edit Group Settings of desired group > Pages tab
 ### Colors
 
 * Box Header Background Color: #FFFFFF
-* Box Header Color Color: #FFFFFF
+* Box Header Border Color: #FFFFFF
 * Box Header Text Color: #1E1E1E
 * Box Header Link Color: #0579B8
 * Box Header Active Link Color: #0579B8

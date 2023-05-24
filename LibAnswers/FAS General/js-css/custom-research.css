@@ -5,29 +5,23 @@
 <link rel="stylesheet" type="text/css" href="//libapps.s3.amazonaws.com/sites/61/include/trueno.css">
 
 <script src="https://api2.libanswers.com/1.0/widgets/8323"></script>
-<!-- Commented out the next two lines, which load the LibChat slider widget, since LTS is not using LibChat. --20220325 ehk
-/*
 <script src="https://v2.libanswers.com/load_chat.php?hash=e51326de242dae8568d89faec0d175ef"></script>
 <script src="https://ask.library.harvard.edu/load_chat.php?hash=e807aada1fa7fa30ce04e26f09326529"></script>
-*/ -->
 
 <script>
 $(document).ready(function() {
-	var referrer = decodeURIComponent(location.search).replace('?referrer=', '');
-    $("textarea#pdetails_109153").val(referrer); 
-
 	if ($(window).width() < 430) {
-        $("#s-la-content-search-query-7255").attr('placeholder', 'Try "Zotero"');
+        $("#s-la-content-search-query-107376").attr('placeholder', 'Try "Zotero"');
     }
     else {
-        $("#s-la-content-search-query-7255").attr('placeholder', 'Try "printer help" or "Zotero"');
+        $("#s-la-content-search-query-107376").attr('placeholder', 'Try "printer help" or "Zotero"');
     }
     $(window).resize(function () {
         if ($(window).width() < 430) {
-            $("#s-la-content-search-query-7255").attr('placeholder', 'Try "Zotero"');
+            $("#s-la-content-search-query-107376").attr('placeholder', 'Try "Zotero"');
             }
         else {
-            $("#s-la-content-search-query-7255").attr('placeholder', 'Try "printer help" or "Zotero"');
+            $("#s-la-content-search-query-107376").attr('placeholder', 'Try "printer help" or "Zotero"');
         }
     });
 
@@ -207,7 +201,7 @@ a, .s-la-widget a {
 }
 
 /*B&W BUTTON*/
-button, .btn, #libchat_e51326de242dae8568d89faec0d175ef button, .btn-primary, #s-la-content-text-55622 a.button, #s-la-content-text-55623 a.button {
+button, .btn, #libchat_e51326de242dae8568d89faec0d175ef button, .btn-primary {
 	font-family:'Trueno','Montserrat',sans-serif !important;
 	letter-spacing:1.17px !important;
 	text-transform:uppercase;
@@ -224,8 +218,8 @@ button, .btn, #libchat_e51326de242dae8568d89faec0d175ef button, .btn-primary, #s
   transition:all 0.4s ease;
 }
 
-button:hover, .btn:hover, #libchat_e51326de242dae8568d89faec0d175ef button:hover, .btn-primary:hover, #s-la-content-text-55622 a.button:hover, #s-la-content-text-55623 a.button:hover,
-button:focus, .btn:focus, #libchat_e51326de242dae8568d89faec0d175ef button:focus, .btn-primary:focus, #s-la-content-text-55622 a.button:focus, #s-la-content-text-55623 a.button:focus {
+button:hover, .btn:hover, #libchat_e51326de242dae8568d89faec0d175ef button:hover, .btn-primary:hover,
+button:focus, .btn:focus, #libchat_e51326de242dae8568d89faec0d175ef button:focus, .btn-primary:focus {
 	background:#6c6c6c !important;
 	border-color:#6c6c6c !important;
 	color:#fff !important;
@@ -307,7 +301,7 @@ button:focus, .btn:focus, #libchat_e51326de242dae8568d89faec0d175ef button:focus
 
 /*HEADER STYLE*/
 .container {
-	padding:40px 0;
+	padding:40px 0 0 0;
 }
 .hl_header, .container.hl_footer {
 	width:100%;
@@ -372,11 +366,11 @@ h1#s-la-public-header-title {
 .s-la-content-search {
 	text-align: left;
 }
-#s-la-content-search-7255 .form-group {
+#s-la-content-search-107376 .form-group {
 	border:1px solid #1e1e1e;
 	border-radius:3px;
 }
-#s-la-content-search-query-7255 {
+#s-la-content-search-query-107376 {
 	padding:5px 10px;
 	margin:0 2px 0 0;
 	height:60px;
@@ -386,7 +380,7 @@ h1#s-la-public-header-title {
 	border-color:transparent;
 	color: #6c6c6c;
 }
-#s-la-content-search-query-7255:focus {
+#s-la-content-search-query-107376:focus {
 	border:1px solid #66afe9;
 }
 
@@ -403,6 +397,16 @@ body:not(.s-la-page-home)  .navbar-form .s-la-content-search-query {
 	body.s-la-page-home .navbar-form .s-la-content-search-query {
 		max-width: 100%;
 	}
+}
+/* need to add this for homepage width to work */
+@media (min-width: 100px) {
+	.navbar-form .s-la-content-search-query {width: 600px; display:block;}
+}
+@media (min-width: 992px) {
+	.navbar-form .s-la-content-search-query {width: 800px;}
+}
+@media (min-width: 1200px) {
+	.navbar-form .s-la-content-search-query {width: 1010px;}
 }
 
 /*WIDTH OF SEARCH BUTTON*/
@@ -432,7 +436,7 @@ button.s-la-searchform-button, .s-la-searchform-button:active, .s-la-searchform-
 }
 
 /*RIGHT FACING ARROW > */
-button.s-la-searchform-button::after, #s-la-content-link-55624 a::after {
+button.s-la-searchform-button::after {
 	border-bottom: 0.425em solid transparent;
 	border-left: 0.5em solid currentColor;
 	border-top: 0.425em solid transparent;
@@ -451,7 +455,7 @@ button.s-la-searchform-button::after {
 }
 
 /*FONT OF AUTOCOMPLETE LIST*/
-ul#s-la-content-search-query-7255_list {
+ul#s-la-content-search-query-107376_list {
 	font-family:'Trueno','Montserrat',sans-serif;
 	font-weight: 300;
 }
@@ -465,7 +469,7 @@ ul#s-la-content-search-query-7255_list {
 }
 
 /*"SEARCH FAQS" TEXT BEFORE SEARCHBOX*/
-body:not(.s-la-page-home) #s-la-searchform-7255:before {
+body:not(.s-la-page-home) #s-la-searchform-107376:before {
     content: "Search all FAQs";
     margin-right: 20px;
     flex: none;
@@ -480,7 +484,7 @@ body:not(.s-la-page-home) #s-la-searchform-7255:before {
 
 /*HIDE "SEARCH FAQS" WHEN SCREEN GETS TOO SMALL - WORK ON FIXING LATER*/
 @media (max-width: 768px) {
-	body:not(.s-la-page-home) #s-la-searchform-7255:before {
+	body:not(.s-la-page-home) #s-la-searchform-107376:before {
 		content:"";
 	}
 }
@@ -492,7 +496,7 @@ body:not(.s-la-page-home) #s-la-searchform-7255:before {
 
 
 /*PADDING & ALIGNMENT*/
-#s-la-content-search-7255 .col-xs-9, #s-la-content-search-7255 .col-xs-3.s-la-searchform-buttoncol, .s-la-box-content, .navbar-collapse {
+#s-la-content-search-107376 .col-xs-9, #s-la-content-search-107376 .col-xs-3.s-la-searchform-buttoncol, .s-la-box-content, .navbar-collapse {
 	padding:0;
 }
 #s-la-page-title-bar .navbar-form, .s-la-color-bars {
@@ -511,41 +515,14 @@ body:not(.s-la-page-home) #s-la-searchform-7255:before {
 	padding-right:40px;
 }
 
-/*CHAT/SUBMIT COLUMNS*/
-#s-la-content-text-55622 .col-md-6:first-of-type, #s-la-content-text-55623 .col-md-6:first-of-type {
-	padding:0 25px 0 0;
-}
-#s-la-content-text-55622 .col-md-6:last-of-type, #s-la-content-text-55623 .col-md-6:last-of-type {
-	padding:0 0 0 25px;
-}
-#s-la-content-text-55622 .col-md-6 h3, #s-la-content-text-55623 .col-md-6 h3 {
-	margin-top:0;
-}
-@media (max-width:991px) {
-	#s-la-content-text-55622 .col-md-6:first-of-type, #s-la-content-text-55623 .col-md-6:first-of-type,
-	#s-la-content-text-55622 .col-md-6:last-of-type, #s-la-content-text-55623 .col-md-6:last-of-type {
-		padding:0;
-	}
-	#s-la-content-text-55622 .col-md-6 h3, #s-la-content-text-55623 .col-md-6 h3 {
-		margin-top:30px;
-	}
-}
-
-
-/*SEE ALL FAQs*/
-#s-la-content-link-55624 {
-	text-align: right;
-
-}
-#s-la-content-link-55624 a {
-	text-transform: uppercase;
-	letter-spacing: 2px;
-	font-size: 14px;
-}
-
 /*WIDTH OF ANSWERS*/
-#s-srch-source-0 .row .col-md-9, #s-la-box-56347-container, #s-la-content-faqlist-55621  {
+#s-srch-source-0 .row .col-md-9, #s-la-box-108687-container, .s-la-content-faqlist  {
 	max-width:930px;
+}
+
+/* HOLLIS FAQs BOX */
+#s-la-content-text-108311 p {
+	padding-bottom: 0;
 }
 
 /*POPULAR QUESTIONS BOX*/
@@ -558,13 +535,11 @@ body:not(.s-la-page-home) #s-la-searchform-7255:before {
 }
 
 /* trending faqs  */
-#s-la-box-56345-container {
+/* #s-la-box-74048-container {
   margin-top: 20px;
-}
+} */
 .s-la-content-faqlist ul {
 	margin:0;
-	column-count: 2;
-	column-gap: 60px;
 	list-style:disc;
   padding-left: 20px;
 }
@@ -579,7 +554,7 @@ body:not(.s-la-page-home) #s-la-searchform-7255:before {
 
 
 /*CHAT-EMAIL-MEET*/
-#s-la-box-92231-container {
+#s-la-box-108683-container {
 	padding:40px 0;
 	border-top:1px solid rgb(192,192,192);
 }
@@ -601,6 +576,9 @@ body:not(.s-la-page-home) #s-la-searchform-7255:before {
   font-size: 16px !important;
   line-height: 30px !important;
 	padding-bottom: 1.84em;
+}
+.hl__asklib p a {
+	padding-bottom: 0;
 }
 .hl__asklib h2 {
   font-family: "Trueno", "Montserrat", sans-serif;
@@ -665,17 +643,17 @@ body:not(.s-la-page-home) .hl__asklib--header svg {
 
 /* ALERT MESSAGE */
 
-.hl__lts__alert--off {
-	display: none;
+.hl__asklib__alert--off {
+	display:none;
 }
 
-.hl__lts__alert {
+.hl__asklib__alert {
 	background: white url("https://harvard-library-web-team.gitlab.io/Harvard-Patterns/assets/images/dots.png") top center repeat;
 	padding: 20px;
 	margin-bottom: 60px;
 }
 
-.hl__lts__details {
+.hl__asklib__details {
 	display: grid;
 	grid-template-columns: 155px minmax(auto, 710px);
 	grid-gap: 0 20px;
@@ -685,7 +663,7 @@ body:not(.s-la-page-home) .hl__asklib--header svg {
 	max-width: 930px;
 }
 
-.hl__lts__alert--title {
+.hl__asklib__alert--title {
   font-family: "Trueno", "Montserrat", sans-serif;
   font-size: 15px;
   font-weight: 600;
@@ -695,7 +673,7 @@ body:not(.s-la-page-home) .hl__asklib--header svg {
   align-self: center;
 }
 
-.hl__lts__alert--description {
+.hl__asklib__alert--description {
 	font-family: "Trueno", "Montserrat", sans-serif;
 	font-size: 17px !important;
 	line-height: 30px !important;
@@ -884,17 +862,17 @@ button.libchat_offline:hover, button.libchat_offline:focus {
 
 .container.hl_footer a, .container.hl_footer h4, .container.hl_footer li {
 	color: #fff;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 27px;
-    text-transform: uppercase;
-    letter-spacing: 1.87px
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 27px;
+  text-transform: uppercase;
+  letter-spacing: 1.87px
 }
 .hl_footer-policy p {
-    font-size: 14px !important;
-    line-height: 19px !important;
-    color: silver !important;
-    font-weight: 300 !important;
+  font-size: 14px !important;
+  line-height: 19px !important;
+  color: silver !important;
+  font-weight: 300 !important;
 }
 
 .hl_footer-ask-logo {
@@ -948,15 +926,10 @@ button.libchat_offline:hover, button.libchat_offline:focus {
 .s-srch-top-header {
 	display:none;
 }
-.s-srch-askbutton p.alert.alert-info { 
-	display:none;
-}
-
-/* This was the AskLib behavior, commented out to replace with display:none 7/16/22 --ehk {
+.s-srch-askbutton p.alert.alert-info {
 	background-color:transparent;
 	border-color:transparent;
-}*/
-
+}
 .s-srch-askbutton .alert {
 	padding:0;
 }
@@ -991,11 +964,6 @@ button.libchat_offline:hover, button.libchat_offline:focus {
 
 /*hide question meta data (last updated, views)*/
 .s-la-faq-listing-meta, .s-srch-result-meta {
-	display:none;
-}
-
-/*hide Contact Us box (we use directly embedded form instead) */
-.s-labox-box105635-container, .s-la-box105635 {
 	display:none;
 }
 
@@ -1101,7 +1069,6 @@ li.s-la-faq-listing {
 }
 .hl__site-alert-banner p {
 	margin-right: 20px;
-	padding-bottom:0;
 }
 .hl__site-alert-banner span, .hl__site-alert-banner a {
   font-weight: 700;
@@ -1158,9 +1125,6 @@ li.s-la-faq-listing {
 		padding-right: 0;
 	}
 
-	.s-la-content-faqlist ul {
-		column-count: 1;
-	}
 	.hl__asklib__details {
 		display: block;
 		padding: 20px;
@@ -1216,28 +1180,5 @@ li.s-la-faq-listing {
 		height:100px;
 	}
 }
-
-
-/* MIGHT BE NEEDED - HELPS STYLE THE SEARCH BAR, BUT DIF FROM COVID19 PAGE */
-.s-la-navbrowse {display: none;}
-
-.navbar-right {display:none;}
-
-.s-la-color-bars {color:#333;}
-
-.s-la-public-home.s-la-public-header-text {text-align:left;}
-
-h1#s-la-public-header-title {font-size:36px;}
-
-@media (min-width: 100px) {
-    .navbar-form .s-la-content-search-query {width: 600px; display:block;}
-}
-
-@media (min-width: 992px) {
-    .navbar-form .s-la-content-search-query {width: 800px;}
-}
-@media (min-width: 1200px) {
-    .navbar-form .s-la-content-search-query {width: 1010px;}
-  }
 
 </style>

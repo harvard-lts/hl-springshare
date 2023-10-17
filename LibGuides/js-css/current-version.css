@@ -2208,4 +2208,62 @@ body.hl__template .lcs_slide_out-r {
   top: 160px;
 }
 
+/* SEARCH OPERATOR TABLE */
+.hl__search-operator__table {
+  background: #f9f9f9;
+}
+
+table.hl__search-operator__table > tbody > tr > td {
+  padding: 20px 10px;
+  vertical-align: middle;
+}
+
+.hl__search-operator__table tr td:first-child {
+  font-family: "Trueno", "Montserrat", sans-serif;
+}
+
+.hl__search-operator__table tr td:first-child > strong {
+  background: #A51C30;
+  border-radius: 50%;
+  line-height: 1em;
+  padding: 1em 0;
+  height: 3em;
+  width: 3em;
+  display: inline-block;
+  text-align: center;
+  color: white;
+}
+
+table.hl__search-operator__table p,
+table.hl__search-operator__table p:last-child {
+  margin-bottom: 0;
+}
+
+table.hl__search-operator__table p:first-child {
+  margin-bottom: 20px;
+}
+
+/* SEARCH OPERATOR PRO TIP */
+.hl__search-operator__table td[colspan="3"] {
+  background: white url("https://harvard-library-web-team.gitlab.io/Harvard-Patterns/assets/images/dots.png") top center repeat;
+  padding: 30px 50px;
+}
+
+.hl__search-operator__table td[colspan="3"] p {
+  display: inline-block;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+
+.hl__search-operator__table td[colspan="3"] p:not(:first-child) {
+  width: calc(100% - 110px);
+}
+
+.hl__search-operator__table td[colspan="3"] p:first-child {
+  text-transform: uppercase;
+  font-weight: 700;
+  align-self: center;
+  margin-right: 20px;
+}
+
 </style>

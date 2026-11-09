@@ -99,6 +99,11 @@ h1 {
 	font-weight:500;
 }
 
+.s-la-faq-answer ul, .s-la-faq-answer ol {
+	margin-bottom: 0;
+	padding-bottom: 1.84em;
+}
+
 h3, #libchat_modal_title {
 	font-family:'Trueno','Montserrat',sans-serif;
 	color:#1E1E1E;
@@ -169,6 +174,7 @@ p, .s-la-faq-answer {
 /*LINKS*/
 a, .s-la-widget a {
 	font-family:'Trueno','Montserrat',sans-serif;
+	text-decoration: none !important;
 }
 #s-la-page-maincontent a, .s-la-widget a, .hl__link-tag button {
 	font-size:19px;
@@ -383,6 +389,10 @@ h1#s-la-public-header-title {
 #s-la-content-search-query-7255:focus {
 	border:1px solid #66afe9;
 }
+#s-la-page-title-bar {
+	margin-bottom:60px;
+ }
+ 
 
 /*OVERALL WIDTH OF BOX*/
 body:not(.s-la-page-home)  .navbar-form .s-la-content-search-query {
@@ -573,8 +583,7 @@ body:not(.s-la-page-home) #s-la-searchform-7255:before {
 
 
 /*CHAT-EMAIL-MEET*/
-#s-la-box-92231-container {
-	padding:40px 0;
+.s-la-page-column {
 	border-top:1px solid rgb(192,192,192);
 }
 
@@ -584,49 +593,26 @@ body:not(.s-la-page-home) #s-la-searchform-7255:before {
 }
 
 /* MORE HELP THREE-UP */
-.hl__asklib {
-	padding: 0 30px 30px 30px;
-}
-.hl__asklib, #hl__chat-button .hl__chat-button {
-	text-align: center;
-}
-.hl__asklib p, .hl__asklib p a {
-  text-align: left;
+#s-la-box-121292 p, #s-la-box-121293 p, #s-la-box-121294 p, #s-la-box-121292 a, #s-la-box-121293 a, #s-la-box-121294 a {
   font-size: 16px !important;
   line-height: 30px !important;
-	padding-bottom: 1.84em;
 }
-.hl__asklib p a {
-	padding-bottom: 0;
+.hl__asklib--header {
+	text-align: center;
 }
-.hl__asklib h2 {
-  font-family: "Trueno", "Montserrat", sans-serif;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 43px;
-  margin-bottom: 20px;
+.hl__asklib--header h2 {
+	margin-bottom: 20px;
 }
-/* chat column */
-.hl__asklib--chat .hl__hours {
-	padding-bottom: 1.84em;
-}
-.hl__asklib--chat .hl__hours p {
-  font-family: "Trueno", "Montserrat", sans-serif;
-  margin: 0;
-  font-size: 16px !important;
-  line-height: 28px !important;
-  color: #1e1e1e !important;
-	padding-bottom: 0;
-}
-.hl__asklib--chat .hl__hours span {
-	float: right;
-}
-
+#s-la-box-121292-container, #s-la-box-121293-container, #s-la-box-121294-container {
+	padding: 0 20px;
+ }
 /* float heading next to icon */
 body:not(.s-la-page-home) .hl__asklib--header {
 	display: flex;
 	justify-content: center;
 	margin-bottom: 20px;
+  align-items: center;
+  gap: 10px;
 }
 body:not(.s-la-page-home) .hl__asklib h2 {
 	font-size: 24px;
@@ -638,12 +624,13 @@ body:not(.s-la-page-home) .hl__asklib--header svg {
 	max-height: 32px;
 	max-width: 32px;
 }
-
 @media(max-width:992px){
 	.hl__asklib--header {
 		display: flex;
 		justify-content: center;
 		margin-bottom: 20px;
+		align-items: center;
+		gap: 10px;
 	}
 	.hl__asklib h2 {
 	  font-size: 24px;
@@ -656,7 +643,54 @@ body:not(.s-la-page-home) .hl__asklib--header svg {
 		max-width: 32px;
 	}
 }
-
+/* hours */
+#s-la-content-text-121982 table {
+  font-family: "Trueno", "Montserrat", sans-serif;
+  font-size: 16px;
+  line-height: 28px;
+  color: #1e1e1e;
+  width: 100%;
+	margin: 1.84em 0;
+}
+#s-la-content-text-121982 table,
+#s-la-content-text-121982 table td {
+  border-color: transparent;
+}
+#s-la-content-text-121982 td:last-child {
+  text-align: right;
+}
+/* chat button */
+.s-la-content-chat.s-la-content div {
+  text-align: center;
+}
+.s-la-content-chat.s-la-content div button {
+  padding: 12px 48px 12px 18px !important;
+  position: relative;
+  width: auto;
+  line-height: 1em;
+}
+.s-la-content-chat.s-la-content div button::before {
+  content: '';
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  margin-right: 15px;
+  vertical-align: sub;
+  background-color: #a51c30;
+}
+.s-la-content-chat.s-la-content div button.libchat_online::before {
+  background-color: #50a440;
+}
+.s-la-content-chat.s-la-content div button.libchat_online::after {
+  content: '';
+  position: absolute;
+  bottom: 3px;
+  width: 15px;
+  top: 3px;
+  right: 19px;
+  background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='20' height='20' viewBox='0 0 20 20'%3E%3Cg%3E%3Cg transform='translate(-906 -1005)'%3E%3Cpath d='M923.78 1022.78V1015H926v7.78c0 1.22-1 2.22-2.22 2.22h-15.56c-1.23 0-2.22-1-2.22-2.22v-15.56c0-1.22.99-2.22 2.22-2.22H916v2.22h-7.78v15.56zm-5.71-17.78H926v7.93h-2.27v-4.07L912.6 1020l-1.6-1.6 11.14-11.13h-4.07z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E") center / contain no-repeat;
+}
 
 /*------------------------------------------------------------------------------*/
 
@@ -1226,5 +1260,5 @@ h1#s-la-public-header-title {font-size:36px;}
 @media (min-width: 1200px) {
     .navbar-form .s-la-content-search-query {width: 1010px;}
   }
-
+	
 </style>
